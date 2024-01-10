@@ -1,0 +1,17 @@
+n = int(input("Please enter a number between 1 and 20\n"))
+# Ask user tp input number in range
+if n % 2 == 1:
+# If n returns 1 when divided by 2
+    print("Weird")
+#  Print Weird
+elif n % 2 == 0 and 2 <= n <= 5:
+# If n returns 0 when divided by 2 and is in range 2 to 5
+    print("Not Weird")
+# print Not Weird
+elif n % 2 == 0 and 6 <= n <= 20:
+# If n returns 0 when divided by 2 and is in range 6 to 20 
+    print("Weird")
+# Print Weird
+else:
+    print("Not Weird")
+# Everything else print Not Weird 
