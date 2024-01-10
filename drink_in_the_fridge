@@ -1,0 +1,86 @@
+# Programme to find out how many and what type of drinks are left in the fridge
+diet_coke = 0
+kombucha = 0
+sparkling_water = 0
+apple_juice = 0
+
+# Ask user how many different drinks are in the fridge
+new_diet_coke = input("How many diet cokes are in the fridge? ")
+diet_coke = int(diet_coke) + int(new_diet_coke)
+
+new_kombucha = input("How many kombuchas are in the fridge? ")
+kombucha = int(kombucha) + int(new_kombucha)
+
+new_sparkling_water = input("How many sparkling waters are in the fridge? ")
+sparkling_water = int(sparkling_water) + int(new_sparkling_water)
+
+new_apple_juice = input("How many apple juices are in the fridge? ")
+apple_juice = int(apple_juice) + int(new_apple_juice)
+
+# Ask user what drink they chose and make it work in all caps
+drink_taken =  input("What drink did you take out of the fridge? ")
+drink_taken = drink_taken.lower()
+
+
+while True:
+    if drink_taken == "diet coke":
+        how_many = input("How many did you take? ")
+        diet_coke = int(diet_coke) - int(how_many)
+        any_more = input("Did you take any other drinks out? ")
+    if any_more == "no":
+        break
+    if any_more == "yes":
+        drink_taken =  input("What drink did you take out of the fridge? ")
+    if drink_taken == "diet coke":
+        continue
+    else:
+        break
+    
+while True:
+    if drink_taken == "kombucha":
+        how_many = input("How many did you take? ")
+        kombucha = int(kombucha) - int(how_many)
+        any_more = input("Did you take any other drinks out? ")
+    if any_more == "no":
+        break    
+    if any_more == "yes":
+        drink_taken =  input("What drink did you take out of the fridge? ")
+    if drink_taken == "kombucha":
+        continue
+    else:
+        break
+      
+while True:
+    if drink_taken == "sparkling water":
+        how_many = input("How many did you take? ")
+        sparkling_water = int(sparkling_water) - int(how_many)
+        any_more = input("Did you take any other drinks out? ")
+    if any_more == "no":
+        break    
+    if any_more == "yes":
+        drink_taken =  input("What drink did you take out of the fridge? ")
+    if drink_taken == "sparkling water":
+        continue
+    else:
+        break
+
+while True:
+    if drink_taken == "apple juice":
+        how_many = input("How many did you take? ")
+        apple_juice = int(apple_juice) - int(how_many)
+        any_more = input("Did you take any other drinks out? ")
+    if any_more == "no":
+        break    
+    if any_more == "yes":
+        drink_taken =  input("What drink did you take out of the fridge? ")
+    if drink_taken == "apple juice":
+        continue
+    else:
+        break
+
+
+print("Drinks you have left in the fridge:\n \t" 
+      + str(diet_coke) + " diet cokes!\n \t" 
+      + str(kombucha) + " kombuchas!\n \t"
+      + str(sparkling_water) + " sparkling waters!\n \t"
+      + str(apple_juice) + " apple juices!\n")
